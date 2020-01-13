@@ -1,0 +1,10 @@
+package com.bridgelabz.basicprgm;
+
+import java.util.Scanner;
+
+public class leapyear {
+	Scanner scan=new Scanner(System.in);
+	System.out.println("enter year:");
+	
+
+}
