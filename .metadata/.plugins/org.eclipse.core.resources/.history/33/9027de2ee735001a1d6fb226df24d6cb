@@ -11,8 +11,7 @@ class flipcointest {
 	public void addtest(){
 		flipcoin f=new flipcoin();
 
- assertThat(85,is equal(0,100));
-// assertThat(f.prcent(3), allOf(greaterThanOrEqualTo(0),lessThanOrEqualTo(100)));
+ assertThat(f.prcent(3)).isBetween(0, 100);
 		
 		//fail("Not yet implemented");
 	}
