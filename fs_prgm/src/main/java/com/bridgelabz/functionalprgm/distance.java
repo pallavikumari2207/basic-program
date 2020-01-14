@@ -1,0 +1,13 @@
+package com.bridgelabz.functionalprgm;
+
+public class distance {
+	public static void main(String[] args)
+	{
+		int m=Integer.parseInt(args[0]);
+		int n=Integer.parseInt(args[1]);
+		int res=(int) Math.sqrt((m*m+n*n));
+		System.out.println("eucledian distance of "+m+" & "+n+" is: "+res);
+	}
+	
+
+}
