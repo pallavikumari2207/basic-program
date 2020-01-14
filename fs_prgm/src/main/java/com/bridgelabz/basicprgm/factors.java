@@ -24,10 +24,6 @@ public class factors {
 	                n /= i; 
 	            }
 	        } 
-	  
-	      
-	       // if (n > 2) 
-	         //   System.out.print(n); 
 	    } 
 	  
 	   

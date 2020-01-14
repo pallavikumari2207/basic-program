@@ -11,7 +11,6 @@ public class stringReplace {
 	String name=scan.next();
 	String str="Hello <<UserName>> How are you? ";
 	 String[] uname = name.split(" ");
-	 //System.out.println("name:"+uname);
 	String str1=str.replaceAll("<<UserName>>",uname[0]);
 	System.out.println(str1);
 	

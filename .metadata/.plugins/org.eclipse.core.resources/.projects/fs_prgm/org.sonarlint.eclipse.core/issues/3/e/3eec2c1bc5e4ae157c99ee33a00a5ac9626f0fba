@@ -1,0 +1,11 @@
+
+…squid:S00117!"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Σ·³η8»βλω-H
+RMINORZ
+CODE_SMELL
+squid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—‚δάϊÿÿÿÿ8»βλω-H	RMINORZ
+CODE_SMELL
+}squid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(®«ΫΫϋÿÿÿÿRMINORZ
+CODE_SMELL
+asquid:S1481")Remove this unused "rand" local variable.(«νψÿÿÿÿ8»βλω-HRMINORZ
+CODE_SMELL
+Rsquid:S2119"Save and re-use this "Random".(«νψÿÿÿÿ8»βλω-HRCRITICALZBUG

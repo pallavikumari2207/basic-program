@@ -1,0 +1,9 @@
+
+ysquid:UselessImportCheck"4Remove this unused import 'java.util.regex.Pattern'.(Γ•…Δϊÿÿÿÿ8άπ’σω-H-RMINORZ
+CODE_SMELL
+squid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(µ΅ΕÒωÿÿÿÿHRMINORZ
+CODE_SMELL
+tsquid:UselessImportCheck"4Remove this unused import 'java.util.regex.Matcher'.(λΕ›γ8άπ’σω-H,RMINORZ
+CODE_SMELL
+squid:S3776"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(ΫΫ―ψ8άπ’σω-H.RCRITICALZ
+CODE_SMELL
