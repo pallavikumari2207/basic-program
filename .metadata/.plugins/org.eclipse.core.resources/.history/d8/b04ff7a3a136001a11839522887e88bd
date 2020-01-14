@@ -1,0 +1,30 @@
+package com.bridgelabz.functionalprgm;
+
+import java.util.Scanner;
+
+public class quardetic {
+
+	public static void main(String[] args) {
+		System.out.println("enter value of cofficents of quardatic eqation:");
+		Scanner scan=new Scanner(System.in);
+		double a,b,c;
+		a=scan.nextInt();
+        b=scan.nextInt();
+        c=scan.nextInt();
+        double x1,x2,delta,p,q;
+        delta=b*b-4*a*c;
+        if(delta>=0)
+        {
+        	x1=(-b+Math.pow(delta, 0.5))/(2*a);
+        	x2=(-b-Math.pow(delta, 0.5))/(2*a);
+        	System.out.println("the roots of x1 and x2 are "+ x1 +"+" +x2);
+        }
+        if(delta<0)
+        {
+        	p=(-b)/(2*a);
+        	q=Math.pow(-delta,0.5)/(2*a);
+        	System.out.println("the roots of x1 and x2 are "+ p+" " + "+" +"i"+ q);
+        }
+	}
+
+}
