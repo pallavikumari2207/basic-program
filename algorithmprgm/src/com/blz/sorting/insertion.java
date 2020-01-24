@@ -3,7 +3,7 @@ package com.blz.sorting;
 public class insertion {
 public static void main(String []args)
 {
-	int [] arr= {7,5,4,3,6,8};
+	int [] arr= {7,5,4,3,6};
 	System.out.println("unsorted array is:");
 	for (int i=0;i<arr.length;i++)
 	{
