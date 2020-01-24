@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Dectobin {
 public static void main(String[] ags)
-{   //int r=0;
-	int [] rem=new int[8];
+{ 
+  int [] rem=new int[8];
 Scanner scan= new Scanner(System.in);
 System.out.println("enter the number");
 int n= scan.nextInt();

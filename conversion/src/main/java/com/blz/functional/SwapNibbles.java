@@ -12,15 +12,10 @@ public class SwapNibbles {
 		int [] arr=new int [8];
 		int [] res={1,1,1,1,0,0,0,0};
 		int[] pos= {0,0,0,0,1,1,1,1};
-		//res= {0,0,0,0,1,1,1,1};
 		arr=d.btd(x);
 		System.out.println();
 		int[] swapped =swapNibbles(arr,res,pos);
-		//System.out.println("hi"+swapped);
-		/*for(int i=swapped.length-1;i>=0;i--)
-		{
-		System.out.print(swapped[i]);	
-		}*/
+		
 	}
 		static int[] swapNibbles(int[] arr,int[] res,int [] pos) 
 		{ 
