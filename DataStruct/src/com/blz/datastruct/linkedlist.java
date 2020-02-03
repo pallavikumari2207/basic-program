@@ -76,12 +76,15 @@ public class linkedlist {
 		     n=new Node(val,null);
 		     t=start;
 		     for(int i=1;i<pos-1;i++)
-		     { 
-		    	 t=t.getnext();
+		     { if (n.getdata().compareTo(start.getdata() < 0) 
+		    		 { t=t.getnext();
 		    	 n.setnext(t.getnext());
 		    	 size++;
-		     }
-		   }
+		     }else if (n.getdata().compareTo( t.getdata() > 0)
+		     {t=t.getnext();
+	    	 t.setnext(n.getnext());
+	    	 size++;
+		   }}
 	   else
 		   System.out.println("insertion not possible");
    }

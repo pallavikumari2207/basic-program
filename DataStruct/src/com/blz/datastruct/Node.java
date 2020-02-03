@@ -1,34 +1,36 @@
 package com.blz.datastruct;
 
-public class Node {
+import com.blz.datastructure.Node;
+
+public class Node<T> {
 	
-		String data;
-		Node next;
-		Node()
-		{
+	private T  data;
+	Node next;
+	public Node()
+	{
 		this.data=null;
 		this.next=null;
-
-		}
-		Node (String val,Node n)
-		{
-		this.data=val;
+	}
+	public Node(T d, Node n)
+	{
+		this.data=d;
 		this.next=n;
-		}
-		void setdata(String d)
-		{
-		data=d;
-		}
-		void setnext(Node n)
-		{
+	}
+	public void setdata(T val)
+	{
+		data=val;
+	}
+	public void setnext(Node n)
+	{
 		next=n;
-		}
-		String getdata()
-		{
+	}
+	public T getdata()
+	{
 		return data;
-		}
-		Node getnext()
-		{
+	}
+	public Node getnext()
+	{
 		return next;
-		}
-		}
+	}
+	}
+

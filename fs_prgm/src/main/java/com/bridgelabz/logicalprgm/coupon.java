@@ -30,11 +30,12 @@ public class coupon {
 		
 public static void main(String [] args)
 {
-	System.out.println("Distinct Coupon NumbeR");
+	System.out.println(" Coupon NumbeR");
 	Scanner scan=new Scanner(System.in);
 	int n=scan.nextInt();
 	int count=collect(n);
 	System.out.println(count);
+	//System.out.println("dist:"+distinct);
 	
 }
 }
