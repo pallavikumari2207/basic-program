@@ -18,6 +18,7 @@ public class implstockManagement implements StockManagementint {
 	private static RepositoryService repo = new RepoServiceImplement();
 	private JSONObject obj = repo.readFromjson();
 	private JSONArray arr = (JSONArray) obj.get("stock");
+	private JSONArray arr2=(JSONArray) obj.get("transaction");
 	private static Gson gson = new Gson();
 
 	@Override
@@ -32,7 +33,7 @@ public class implstockManagement implements StockManagementint {
 		String s = gson.toJson(stock);
 		arr.add(s);
 		save();
-		// display();
+		 display();
 
 	}
 
@@ -51,18 +52,26 @@ public class implstockManagement implements StockManagementint {
 
 	@Override
 	public void display() {
-		JSONArray ref = (JSONArray) obj.get("stock");
-		for (int j = 0; j < ref.size(); j++) {
-			String s = ref.get(j).toString();
+		//JSONArray ref = (JSONArray) obj.get("stock");
+		for (int j = 0; j < arr.size(); j++) {
+			String s = arr.get(j).toString();
 			StockManagemnt stock = gson.fromJson(s, StockManagemnt.class);
 			System.out.println("stockName: " + stock.getStockName());
 			System.out.println("sharePrice: " + stock.getsharePrice());
 			System.out.println("stockShare: " + stock.getstockShare());
 			System.out.println();
 		}
-		// TODO Auto-generated method stub
-
 	}
+public void displayAfterTransaction() {
+	for(int i=0;i<arr2.size();i++) {
+		 String a=arr2.get(i).toString();
+		 Transaction t=gson.fromJson(a,Transaction .class);
+		 System.out.println("symbol:"+t.getSymbol());
+		 System.out.println("status:"+ t.getStatus());
+		 System.out.println("transaction date:"+t.getTrancDate());
+		 System.out.println("transaction time:"+t.getTrancTime());
+	 }
+		}
 
 	public void save() {
 		repo.writeToJson(obj);
@@ -84,6 +93,7 @@ public class implstockManagement implements StockManagementint {
 				arr2.add(var);
 				System.out.println(arr);
 				display();
+				displayAfterTransaction() ;
 				save();
 			}
 
@@ -106,6 +116,8 @@ public class implstockManagement implements StockManagementint {
 					JSONArray arr2 = (JSONArray) obj.get("transaction");
 					arr2.set(j, var);
 					ref.set(j, val);
+					display();
+					displayAfterTransaction();
 					save();
 				} else {
 					System.out.println("we dont have that amount of share to be sold");

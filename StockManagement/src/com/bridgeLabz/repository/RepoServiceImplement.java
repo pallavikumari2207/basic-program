@@ -21,7 +21,6 @@ public class RepoServiceImplement implements RepositoryService {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		System.out.print(j.toJSONString());
 	}
 	// RepositoryService ref=new RepoServiceImplement();
 
