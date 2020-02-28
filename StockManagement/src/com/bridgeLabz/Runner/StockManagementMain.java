@@ -10,7 +10,7 @@ public class StockManagementMain {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("-----------------Stock Report-------------------");
 		System.out.println(
-				"press 1 for adding stock \n press 4 to display \n press 3 to get total price of stock by name\n press 4 to buy a stock\n press 5 to sell a stock\n press 6 to exit\n");
+				"press 1 for adding stock \n press 4 to display \n press 3 to get total price of stock by name\n press 4 to buy a stock\n press 5 to sell a stock\n press 6 to see stockinlinkendlist press 7 to exit\n");
 		StockManagementint stockvalue = new implstockManagement();
 		boolean isExit = false;
 		while (!isExit) {
@@ -43,8 +43,9 @@ public class StockManagementMain {
 				String stock_Name = scan.next();
 				stockvalue.sell(stock_Share, stock_Name);
 				break;
-
-			case 6:
+			case 6:System.out.println("linkedlist:");
+			implstockManagement.stockLinkedList();
+			case 7:
 				isExit = true;
 				break;
 			default:

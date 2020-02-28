@@ -40,9 +40,8 @@ public class implstockManagement implements StockManagementint {
 	@Override
 	public void getTotalPriceByName() {
 		double totalAccount = 0;
-		JSONArray ref = (JSONArray) obj.get("stock");
-		for (int j = 0; j < ref.size(); j++) {
-			String s = ref.get(j).toString();
+		for (int j = 0; j < arr.size(); j++) {
+			String s = arr.get(j).toString();
 			StockManagemnt stock = gson.fromJson(s, StockManagemnt.class);
 			totalAccount = totalAccount + stock.totalStockPrice();
 			System.out.println("value of stock of" + stock.getStockName() + ":" + totalAccount);
@@ -52,7 +51,7 @@ public class implstockManagement implements StockManagementint {
 
 	@Override
 	public void display() {
-		//JSONArray ref = (JSONArray) obj.get("stock");
+		
 		for (int j = 0; j < arr.size(); j++) {
 			String s = arr.get(j).toString();
 			StockManagemnt stock = gson.fromJson(s, StockManagemnt.class);
@@ -70,6 +69,7 @@ public void displayAfterTransaction() {
 		 System.out.println("status:"+ t.getStatus());
 		 System.out.println("transaction date:"+t.getTrancDate());
 		 System.out.println("transaction time:"+t.getTrancTime());
+		 
 	 }
 		}
 
@@ -99,6 +99,20 @@ public void displayAfterTransaction() {
 
 		}
 	}
+	public static LinkedList stockLinkedList() {
+		RepoServiceImplement imp=new RepoServiceImplement();
+		JSONObject obj=imp.readFromjson() ;
+		JSONArray arr = (JSONArray) obj.get("stock");
+		Gson gson = new Gson();
+		 LinkedList l=new  LinkedList();
+		for (int j = 0; j < arr.size(); j++) {
+			String s = arr.get(j).toString();
+			StockManagemnt stock = gson.fromJson(s, StockManagemnt.class);
+			l.append(stock);
+		}
+		l.display();
+		return l;
+		}
 
 	public void sell(int stock_Share, String stock_Name) {
 		JSONArray ref = (JSONArray) obj.get("stock");

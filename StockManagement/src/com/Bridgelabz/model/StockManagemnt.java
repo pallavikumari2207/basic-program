@@ -33,5 +33,10 @@ public class StockManagemnt {
 		this.stockShare = stockShare;
 		this.sharePrice = sharePrice;
 	}
+	@Override
+	public String toString() {
+		return " StockName=" + StockName + "\n, stockShare=" + stockShare + "\n, sharePrice=" + sharePrice
+				;
+	}
 
 }
